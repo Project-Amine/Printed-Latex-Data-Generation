@@ -28,7 +28,9 @@ The following Global Parameters for parsing formulas are set in
                 
 
 -- SVG to PNG parameters are set in svg_to_png.py:
-                               
+                THREADS = 64
+                PNG_WIDTH = 512
+                PNG_HEIGHT = 64       
                 
 
 '''

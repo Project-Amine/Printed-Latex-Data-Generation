@@ -15,6 +15,8 @@ class PrintedLatexDataConfig:
     FORMULAS_PATH_NO_TMP = NORMALIZED_FORMULAS_DIR / "formulas.norm.txt"
     PREPROCESS_FORMULAS_SCRIPT_PATH = ROOT_DIRNAME / "preprocess_formulas.py"
     GENERATED_SVG_IMAGES_DIR_NAME = NORMALIZED_FORMULAS_DIR / "generated_svg_images"
+    GENERATED_PNG_DIR_NAME = DATA_DIRNAME / "generated_png_images"
+
 
 
 
@@ -28,7 +30,6 @@ class PrintedLatexDataConfig:
     FORMULAS_PATH_TMP = NORMALIZED_FORMULAS_DIR / "formulas.norm.txt.tmp"
     PNG_FINAL_FORMULAS = PROCESSED_DATA_FOLDER / "final_png_formulas.txt"
     PNG_IMAGES_NAMES_FILE = PROCESSED_DATA_FOLDER/'corresponding_png_images.txt'
-    GENERATED_PNG_DIR_NAME = PROCESSED_DATA_FOLDER / "generated_png_images"
 
     SVG_IMAGE_NAMES_FILE = PROCESSED_DATA_FOLDER / "corresponding_images.txt"
     FINAL_FORMULAS = PROCESSED_DATA_FOLDER / "final_formulas.txt"
@@ -62,4 +63,4 @@ class PrintedLatexDataConfig:
     svg_generation_script_command =  f"python tex_to_svg.py {NORMALIZED_FORMULAS_DIR}/formulas.norm.filtered.txt {GENERATED_SVG_IMAGES_DIR_NAME}"
 
 
-    png_generation_script_command =  f"python svg_to_png.py {PROCESSED_DATA_FOLDER}/corresponding_svg_images.txt {GENERATED_PNG_DIR_NAME}"
+    png_generation_script_command =  f"python svg_to_png.py {NORMALIZED_FORMULAS_DIR}/corresponding_svg_images.txt {GENERATED_PNG_DIR_NAME}"
