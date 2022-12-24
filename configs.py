@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 class PrintedLatexDataConfig:
-    DATA_DIRNAME = Path(__file__).resolve()                         # gives the root directory
+    DATA_DIRNAME = Path(__file__).resolve().parents[0]                         # gives the root directory
     CHROME_RAW_DATA_DIRNAME = DATA_DIRNAME / "Data" / "raw_data" / "chrome"
     UNPACKED_LATEX_RAW_DATA_DIRNAME = DATA_DIRNAME / "raw_data" / "latex"
     PROCESSED_DATA_FOLDER = DATA_DIRNAME / "processed_data"

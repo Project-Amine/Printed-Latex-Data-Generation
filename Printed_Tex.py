@@ -71,15 +71,13 @@ class Generate_Printed_Tex():
         self.generate_svg_images_from_tex = generate_svg_images_from_tex
         self.generate_png_images_from_svg = generate_png_from_svg
         self.number_png_images_to_use_in_dataset = number_png_images_to_use_in_dataset
-        self.labels_transform = labels_transform
-        self.BPE_set_vocab_size = BPE_set_vocab_size
+
 
         self.image_height = image_height
         self.image_width = image_width
-        # self.augment_images = augment_images
 
-        self.batch_size = batch_size
-        self.num_workers = num_workers
+
+
 
         # Downloading formulas
         if self.download_tex_dataset == True:
