@@ -13,8 +13,10 @@ class PrintedLatexDataConfig:
     UNPROCESSED_FORMULA_FILENAME =  DATA_DIRNAME /  "not_normalized" / "formulas.txt"
     NORMALIZED_FORMULAS_DIR =  DATA_DIRNAME / "temporary_data"
     FORMULAS_PATH_NO_TMP = NORMALIZED_FORMULAS_DIR / "formulas.norm.txt"
-
     PREPROCESS_FORMULAS_SCRIPT_PATH = ROOT_DIRNAME / "preprocess_formulas.py"
+    GENERATED_SVG_IMAGES_DIR_NAME = NORMALIZED_FORMULAS_DIR / "generated_svg_images"
+
+
 
 
     UNPACKED_LATEX_RAW_DATA_DIRNAME = DATA_DIRNAME / "raw_data" / "latex"
@@ -28,7 +30,6 @@ class PrintedLatexDataConfig:
     PNG_IMAGES_NAMES_FILE = PROCESSED_DATA_FOLDER/'corresponding_png_images.txt'
     GENERATED_PNG_DIR_NAME = PROCESSED_DATA_FOLDER / "generated_png_images"
 
-    GENERATED_SVG_IMAGES_DIR_NAME =  PROCESSED_DATA_FOLDER /"generated_svg_images"
     SVG_IMAGE_NAMES_FILE = PROCESSED_DATA_FOLDER / "corresponding_images.txt"
     FINAL_FORMULAS = PROCESSED_DATA_FOLDER / "final_formulas.txt"
 

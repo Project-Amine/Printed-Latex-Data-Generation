@@ -254,11 +254,11 @@ def _clean_formulas():
     sr_to_lines(final_formulas, path_to_save_formulas)
 
 def _generate_svg_images():
-    os.chdir(PrintedLatexDataConfig.DATA_DIRNAME)
+    os.chdir(PrintedLatexDataConfig.ROOT_DIRNAME)
     os.system(PrintedLatexDataConfig.svg_generation_script_command)
 
 def _turn_svg_to_png():
-    os.chdir(PrintedLatexDataConfig.DATA_DIRNAME)
+    os.chdir(PrintedLatexDataConfig.ROOT_DIRNAME)
     os.system(PrintedLatexDataConfig.png_generation_script_command)
 
 def _get_formulas(latex: str):

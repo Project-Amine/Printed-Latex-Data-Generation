@@ -6,3 +6,5 @@
 2022-12-24 12:37:32,393 root  INFO     Jobs finished
 2022-12-24 12:39:11,081 root  INFO     Script being executed: /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/preprocess_formulas.py
 2022-12-24 12:39:27,043 root  INFO     Jobs finished
+2022-12-24 13:04:59,960 root  INFO     Script being executed: /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/preprocess_formulas.py
+2022-12-24 13:05:15,922 root  INFO     Jobs finished

@@ -20,6 +20,16 @@ The following Global Parameters for parsing formulas are set in
 -- Formula Length while parsing is set in download_data_utils.py:
                 MAX_FORMULA_LENGTH_in_Bytes = 1024,
                 MIN_FORMULA_LENGTH_BYTES = 40,
+                
+                
+-- Tex to SVG parameters are set in tex_to_svg.py:
+                MAX_NUMBER_TO_RENDER = 1000 
+                THREADS = 10
+                
+
+-- SVG to PNG parameters are set in svg_to_png.py:
+                               
+                
 
 '''
 
@@ -126,3 +136,14 @@ class Generate_Printed_Tex():
 
         # Extra Filtering: FILTER_OUT_WORDS in configs.py  and outpus formulas.norm.filtered.txt in Data/processed_data/normalized
         _clean_formulas()  # removes certain words look for FILTER_OUT_WORDS in repository
+
+
+
+    # Generates svg images from formulas.norm.filtered.txt using a script call
+    def generate_svg_from_tex(self, *args, **kwargs):
+        _generate_svg_images()
+
+
+    # Generates png images from formulas.norm.filtered.txt using a script call
+    def generate_png_from_svg(self, *args, **kwargs):
+        _turn_svg_to_png()
