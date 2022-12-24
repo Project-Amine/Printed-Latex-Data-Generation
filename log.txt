@@ -1,0 +1,8 @@
+2022-12-24 12:37:06,573 root  INFO     Script being executed: /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/preprocess_formulas.py
+2022-12-24 12:37:06,739 root  ERROR    FAILED: cat /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/Data/temporary_data/formulas.norm.txt.tmp | node preprocess_latex.js normalize > /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/Data/temporary_data/formulas.norm.txt 
+2022-12-24 12:37:06,740 root  INFO     Jobs finished
+2022-12-24 12:37:32,278 root  INFO     Script being executed: /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/preprocess_formulas.py
+2022-12-24 12:37:32,393 root  ERROR    FAILED: cat /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/Data/temporary_data/formulas.norm.txt.tmp | node preprocess_latex.js normalize > /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/Data/temporary_data/formulas.norm.txt 
+2022-12-24 12:37:32,393 root  INFO     Jobs finished
+2022-12-24 12:39:11,081 root  INFO     Script being executed: /Users/gregory/PROJECT_ML/PROJECT_AMINE/Printed-Latex-Data-Generation/preprocess_formulas.py
+2022-12-24 12:39:27,043 root  INFO     Jobs finished

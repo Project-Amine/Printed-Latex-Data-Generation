@@ -118,12 +118,14 @@ class ImageProcessor:
             return image
 
 
+
+
+
 ########### Below are functions that download and process raw data #############
 
 
-
-# unpacks downloaded all tars
-def _unpack_tars(number_tex_formulas_to_generate):
+# unpacks all downloaded tars
+def _unpack_tars():
 
 
     if not Path.exists(PrintedLatexDataConfig.UNPROCESSED_FORMULA_FILENAME):
@@ -164,8 +166,7 @@ def _unpack_tars(number_tex_formulas_to_generate):
 
 
 
-# unpacks a tar and writes respective formulas in formula.txt
-
+# unpacks one tar and writes respective formulas in formula.txt (FOR TESTING PURPOSES)
 def _unpack_a_tar():
     if not Path.exists(PrintedLatexDataConfig.UNPROCESSED_FORMULA_FILENAME):
         directory = PrintedLatexDataConfig.CHROME_RAW_DATA_DIRNAME
@@ -206,7 +207,7 @@ def _unpack_a_tar():
 
 
 def _normalize_latex_data():
-    os.chdir(PrintedLatexDataConfig.DATA_DIRNAME)
+    os.chdir(PrintedLatexDataConfig.ROOT_DIRNAME)
     #if not Path.exists(PrintedLatexDataConfig.NORMALIZED_FORMULAS_DIR / "formulas.norm.txt.tmp"):
     os.system(PrintedLatexDataConfig.normalizing_script_command)
 

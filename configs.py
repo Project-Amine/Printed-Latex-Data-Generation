@@ -7,20 +7,27 @@ from pathlib import Path
 
 
 class PrintedLatexDataConfig:
-    DATA_DIRNAME = Path(__file__).resolve().parents[0]                         # gives the root directory
-    CHROME_RAW_DATA_DIRNAME = DATA_DIRNAME / "Data" / "raw_data" / "chrome"
+    ROOT_DIRNAME = Path(__file__).resolve().parents[0]   # gives the root directory
+    DATA_DIRNAME = ROOT_DIRNAME / "Data"
+    CHROME_RAW_DATA_DIRNAME = DATA_DIRNAME /  "raw_data" / "chrome"
+    UNPROCESSED_FORMULA_FILENAME =  DATA_DIRNAME /  "not_normalized" / "formulas.txt"
+    NORMALIZED_FORMULAS_DIR =  DATA_DIRNAME / "temporary_data"
+    FORMULAS_PATH_NO_TMP = NORMALIZED_FORMULAS_DIR / "formulas.norm.txt"
+
+    PREPROCESS_FORMULAS_SCRIPT_PATH = ROOT_DIRNAME / "preprocess_formulas.py"
+
+
     UNPACKED_LATEX_RAW_DATA_DIRNAME = DATA_DIRNAME / "raw_data" / "latex"
     PROCESSED_DATA_FOLDER = DATA_DIRNAME / "processed_data"
 
-    UNPROCESSED_FORMULA_FILENAME = PROCESSED_DATA_FOLDER / "not_normalized" / "formulas.txt"
-    NORMALIZED_FORMULAS_DIR = PROCESSED_DATA_FOLDER / "normalized"
+
+
 
     FORMULAS_PATH_TMP = NORMALIZED_FORMULAS_DIR / "formulas.norm.txt.tmp"
-    FORMULAS_PATH_NO_TMP = NORMALIZED_FORMULAS_DIR / "formulas.norm.txt"
     PNG_FINAL_FORMULAS = PROCESSED_DATA_FOLDER / "final_png_formulas.txt"
     PNG_IMAGES_NAMES_FILE = PROCESSED_DATA_FOLDER/'corresponding_png_images.txt'
     GENERATED_PNG_DIR_NAME = PROCESSED_DATA_FOLDER / "generated_png_images"
-    PREPROCESS_FORMULAS_SCRIPT_PATH = DATA_DIRNAME / "preprocess_formulas.py"
+
     GENERATED_SVG_IMAGES_DIR_NAME =  PROCESSED_DATA_FOLDER /"generated_svg_images"
     SVG_IMAGE_NAMES_FILE = PROCESSED_DATA_FOLDER / "corresponding_images.txt"
     FINAL_FORMULAS = PROCESSED_DATA_FOLDER / "final_formulas.txt"

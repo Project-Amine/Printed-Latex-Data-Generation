@@ -12,7 +12,12 @@ from configs import PrintedLatexDataConfig
 Module to Generate Printed LaTex data from KDDCup, Arxiv, Wikipedia and other sources.
 
 
-The following Global Parameters for parsing formulas are set in download_data_utils.py
+The following Global Parameters for parsing formulas are set in
+
+-- FILTER out Words when parsing is set in configs.py:  FILTER_OUT_WORDS
+
+
+-- Formula Length while parsing is set in download_data_utils.py:
                 MAX_FORMULA_LENGTH_in_Bytes = 1024,
                 MIN_FORMULA_LENGTH_BYTES = 40,
 
@@ -51,6 +56,7 @@ class Generate_Printed_Tex():
                 download_tex_dataset = False,
                 generate_tex_formulas= False,
                 max_label_length = 128,
+                # if number_tex_formulas_to_generate < 1001 only parses one tar file
                 number_tex_formulas_to_generate=150,
                 generate_svg_images_from_tex = False,
                 generate_png_from_svg = False,
@@ -93,10 +99,30 @@ class Generate_Printed_Tex():
         if self.generate_png_images_from_svg == True:
             self.generate_png_from_svg()
 
-        # Downloads tars to Data/raw_data
 
+
+
+
+    # TODO: allow to download from varius sources like Arxiv, Wiki, stackexchange and other sources...
+    # Downloads tars to Data/raw_data
     def download_tex_formulas(self, *args, **kwargs):
         _download_raw_dataset_from_list(PrintedLatexDataConfig.metadata["urls"],
                                         PrintedLatexDataConfig.CHROME_RAW_DATA_DIRNAME)
 
 
+
+    # Unpacks tars and produces formulas.norm.filtered.txt in Data/processed_data/normalized
+    def process_tex_formulas(self, *args, **kwargs):
+
+        # Unpacks tars and produces formulas.txt in Data/processed_data/normalized
+        if self.number_tex_formulas_to_generate < 1001:
+            _unpack_a_tar()
+
+        else:
+            _unpack_tars()
+
+        # Normalization: normalizes latex formulas and outputs formulas.norm.txt in Data/processed_data/normalized
+        _normalize_latex_data()
+
+        # Extra Filtering: FILTER_OUT_WORDS in configs.py  and outpus formulas.norm.filtered.txt in Data/processed_data/normalized
+        _clean_formulas()  # removes certain words look for FILTER_OUT_WORDS in repository
